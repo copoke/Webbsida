@@ -1,0 +1,140 @@
+:root {
+    --color1: #212529;
+    --text-color: #e07a5f;
+}
+
+@font-face {
+    font-family: caghendemoregular;
+    src: url(caghen_demo-webfont.woff2),
+         url(caghen_demo-webfont.woff);
+
+}
+
+body {
+    display:flex;
+    height:1500px;
+    max-width: 100%;
+    margin:0;
+    width:100vw;    
+}
+footer {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/001/987/497/original/abstract-stripes-golden-lines-diagonal-overlap-on-black-background-luxury-stryle-free-vector.jpg);
+    position: absolute;
+    background-size:cover;
+    height: 60vh;
+    width: 100%;
+    margin-top:auto;
+    bottom:-1000px;
+    font-family: caghendemoregular;
+}
+
+footer .container {
+    display: flex;
+    width:100%;
+    height:200px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer .container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height:60%;
+    width:150px;
+    margin-left: 10px;
+    background-color: red;
+}
+
+footer .image-left {
+    background-color:#7a746e;
+    margin-top:50px;
+    width:20%;
+    justify-content: space-around;
+    height:50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--text-color);
+    transition: all ease 0.5s;
+    border-radius: 20px;
+    opacity: 0.4;
+}
+
+footer .image-left:hover {
+    opacity: 0.9;
+}
+
+.container .row {
+    display: flex;
+    flex-wrap: wrap;
+    height:100%;
+    width:100%;
+    justify-content: space-around;
+}
+
+.image-left .social a{
+	display: inline-block;
+    text-align: center;
+    margin-left: 6px;
+    margin-top: 5px;
+    font-size: 30px;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255, 255, 255, 0.192);
+	line-height: 47.5px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+
+.image-left .social a.youtube:hover{
+	color: #ff0000;
+	background-color: #ffffff;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.164);
+}
+
+.image-left .social a.twitter:hover{
+    color:rgb(0, 166, 255);
+    background: white;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.164);
+}
+
+.image-left .social a.instagram:hover{
+    background:white;
+    color:rgb(255, 0, 221);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.164);
+}
+
+.image-left .social a.github:hover {
+    background:white;
+    color:#212529;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.164);
+}
+
+.image-left .social a.tiktok:hover {
+    background:white;
+    color:black;
+}
+
+.tiktok2 {
+    filter: drop-shadow(-2px -2px 0 #24f6f0) brightness(110%);
+}
+
+footer .title {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 35px;
+    justify-content: space-around;
+    margin-top: 30px;
+    border-bottom: 3px solid;
+    margin-bottom: 500px;
+    line-height: 20px;
+    border-radius: 5px;
+    border-color: #eba75f73;
+}
+
+footer .container2 article {
+    display: inline-block;
+}
