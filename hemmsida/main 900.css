@@ -15,6 +15,12 @@
     src: url(Creepster-Regular.tff)
 }
 
+@media (max-width:980px ) {
+    .sneaker-stickout {
+        background-image: url();
+    }
+}
+
 body {
     display:flex;
     height:500px;
@@ -242,7 +248,7 @@ header .main-header a#invisible {
 .container-sneaker {
     position: absolute;
     top:700px;
-    height:100%;
+    height:120%;
     width:100%;
 }
 
@@ -250,7 +256,7 @@ header .main-header a#invisible {
     display: flex;
     background-image: url(https://images4.alphacoders.com/108/1085299.jpg);
     background-size: cover;
-    z-index: 1;
+    z-index: 0;
     width:100%;
     height:100%;
     clip-path: polygon(100% 26%, 100% 100%, 0 91%, 0 19%);
@@ -284,7 +290,7 @@ header .main-header a#invisible {
 .container-sneaker2 {
     position: absolute;
     top:1250px;
-    height:100%;
+    height:120%;
     width:100%;
 }
 
@@ -299,25 +305,6 @@ header .main-header a#invisible {
     background-position-y: 30px;
     background-repeat: no-repeat;
 }
-
-.sneaker-stickout-container {
-    position: absolute;
-    top:1250px;
-    height:120%;
-    width:100%;
-}
-
-.sneaker-stickout{
-    display: flex;
-    background-image: url(https://i.ibb.co/9vXTHJR/1232169-1-removebg.png);
-    background-size: cover;
-    z-index: 1;
-    width:100%;
-    height:960px;
-    margin-top: 226px;
-    background-repeat: no-repeat;
-}
-
 
 .background-sneaker{
     display: flex;

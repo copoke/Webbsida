@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" media="screen and (min-width: 980px)" href="main.css">
+    <link rel="stylesheet" media="screen and (max-width: 980px)" href="main 900.css">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/38c1368b3d.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -13,32 +15,70 @@
     <footer>
         <div class ="container">
             <div class ="row">
-                <div class ="title">ㅤCoolingㅤ</div>
-                <div class ="title">ㅤHejㅤ</div>
-                <div class ="title">ㅤHejㅤ</div>
-                <div class ="title">ㅤHejㅤ</div>
+                <div class ="title">ㅤInfo about meㅤ</div>
+                <div class ="title">ㅤWhat I doㅤ</div>
+                <div class ="title">ㅤPrograms I useㅤ</div>
+                <div class ="title">ㅤExperienceㅤ</div>
             </div>
-            <div class ="image-left">
+            <div class="row2">
+                <div class="column" id="column1">My name is Ron and I'm studying towards computer science in university. I study at Åva gymnasium, I've studied for 1 and a half year doing around half my time here. I have a strong passion towards web development and different programming skills.</div>
+                <div class="column" id="column2">On my freetime I enjoy spending time inside of different game development tools such as unity and blender. I've recently picked up Unreal engine aswell. Even with not knowing how to code a lot on C and C# I instead use different nodes to make the learning curve less steep.</div>
+                <div class="column" id="column3">Blender, This is the program I have the most experience in using. I've used blender now for 2 years and made all kinds of 3d models. These 3d models were usually made for unity creations. Unreal engine is still in learning.</div>
+                <div class="column" id="column4">Although I have no experience yet I'm looking for different opportunities to learn and hopefully be able to expand my knowledge inside of programing and web development.</div>
+            </div>
+            <div class ="container-social">
                 <div class ="social">
-                    <a class="instagram" href="https://stackoverflow.com/questions/15584618/shift-bottom-border-up-in-css">
+                    <a class="instagram" href="https://www.instagram.com/">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a class="twitter" href="https://stackoverflow.com/questions/15584618/shift-bottom-border-up-in-css">
+                    <a class="twitter" href="https://twitter.com/">
                         <i class="fa-brands fa-twitter"></i>
                     </a>
-                    <a class="github" href="https://stackoverflow.com/questions/15584618/shift-bottom-border-up-in-css">
+                    <a class="github" href="https://github.com/copoke/Webbsida">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a class ="youtube" href="https://stackoverflow.com/questions/15584618/shift-bottom-border-up-in-css">
+                    <a class ="youtube" href="https://www.youtube.com/">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
-                    <a class="tiktok" href="https://stackoverflow.com/questions/15584618/shift-bottom-border-up-in-css">
+                    <a class="tiktok" href="https://www.tiktok.com/">
                         <i class="fa-brands fa-tiktok"></i>
                     </a>
                 </div>
             </div>
         </div>
     </footer>
+<header>
+    <div class="main-header">
+        <div class="logo">
+            <a id="invisible" class="header-link">Placeholder</a>
+            <a href="youtube.com" class="header-link">Placeholder</a>
+            <a class="header-link">Placeholder</a>
+            <a class="header-link">Placeholder</a>
+        </div>
+    </div>
+</header>
+<span id="boxshadow">
+    <div class="background-sneaker">
+        <a href="nike.html" class="text">Get now</a>
+        <div class="text">Nike Dunks
+            <div class="undertext text">Air force 2's with premium quality only avaible in small quantities</div>
+        </div>
+    </div>
+</span>
+<div class="container-sneaker">
+    <div class="background-sneaker2">
+        <a href="custom dunks.html">Handmade Custom Dunks</a>
+    </div>
+</div>
+<div class="container-sneaker2">
+    <div class="background-sneaker3">
+    </div>
+</div>
+<div class="sneaker-stickout-container">
+    <div class="sneaker-stickout"></div>
+</div>
+
+
 <script>
     $(".tiktok").on({
     mouseenter: function () {
@@ -48,6 +88,46 @@
         $(".fa-tiktok").removeClass("tiktok2");
     }
 });
+
+    $(document).bind("scroll", function() {
+
+    var max_scroll = $(window).scrollTop()
+    var screen_max = $(document).height() - $(window).height()
+    var screen_max2 = 400
+    var header = $("header")
+    var text = $(".text")
+    var sneakerbox = $(".container-sneaker")
+    var sneakerbox2 = $(".container-sneaker2") 
+    var sneakerstickout = $(".sneaker-stickout")
+    header.css("opacity", 1 - (max_scroll / screen_max))
+    text.css("opacity", 1 - (max_scroll /screen_max2))
+
+    var link = $(".header-link")
+        if (header.css("opacity") < 0.8) {
+            link.addClass("pointer-events")
+        } else {
+            link.removeClass("pointer-events")
+        }
+    var link2 = $("a.text")
+    if (text.css("opacity") < 0.2) {
+        link2.addClass("pointer-events")
+    } else {
+        link2.removeClass("pointer-events")
+    }
+    if (link2.css("opacity") < 0.5) {
+        sneakerbox.addClass("sneakeranimation")
+    }else {
+        sneakerbox.removeClass("sneakeranimation")
+    }
+    if (header.css("opacity") <  0.6) {
+        sneakerbox2.addClass("sneakeranimation")
+        sneakerstickout.addClass("sneakeranimation")
+    }else {
+        sneakerbox2.removeClass("sneakeranimation")
+        sneakerstickout.removeClass("sneakeranimation")
+    }
+
+    });
 </script>
 </body>
 </html>
